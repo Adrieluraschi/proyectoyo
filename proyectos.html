@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+<!--------para titulos---------->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
+<!--------para textos---------->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+
+
+
+</head>
+<header>
+  <nav class="barra">
+  <div class="logo">
+    <img src="images/gifprog.gif" alt="Mi logo" class="logo-img">
+  </div>
+
+  <!-- Menú hamburguesa -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="nav-links" id="nav-links">
+    <a href="index.html">Inicio</a>
+    <a href="sobre-mi.html">Sobre mí</a>
+    <a href="contacto.html">Contacto</a>
+  </div>
+</nav>
+</header>
+<body>
+    <h3 class="titulo1">MIS PROYECTOS</h3>
+    <p id="mi-typed"><span id="typed-text"></span><span class="cursor">█</span></p>
+    
+
+
+
+
+
+<section class="project-card">
+  <h3 class="titulo1">🚀 Proyecto Principal</h3>
+    <div class="card-body">
+      <h5 class="titulo1">El Milagro 2</h5>
+       <p class="proj-desc" style="color: white;">
+        Plataforma para publicar animales perdidos y encontrados: avisos con foto, ubicación aproximada,
+        datos de contacto y estado del aviso. Incluye filtros por especie, zona y fecha para facilitar la búsqueda.
+      </p>
+
+      <ul class="proj-feat">
+        <li style="color: white;"> Subida de fotos y descripción</li>
+        <li style="color: white;">📍 Ubicación aproximada por barrio/ciudad</li>
+        <li style="color: white;">🔎 Filtros por especie, zona y fecha</li>
+        <li style="color: white;">🛠️ Panel básico de administración</li>
+      </ul>
+
+      <div class="proj-actions">
+        <a class="gh-link" href="https://github.com/coriistrahl3-boop/proyecto-elmilagro2" target="_blank" rel="noopener">Ver en GitHub</a>
+        <a class="demo-link" href="demo.html " target="_blank" rel="noopener">Ver demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</body>
+<script>
+const txt = "Mis Proyectos\n" +
+"> Iniciando scripts...\n" +
+"> Conectando repositorios...\n" +
+"> Cargando proyectos...\n" +
+"Proyecto 1: Portafolio Web\n" +
+"Proyecto 2: Gestion-Pagos\n" +
+"Proyecto 3: Aun en procceso\n" +
+"> Escaneo finalizado.";
+
+const el = document.getElementById('typed-text');
+let i = 0;
+const speed = 30;
+
+function type() {
+  if (i < txt.length) {
+    el.innerHTML = txt.substring(0, i++).replace(/\n/g, "<br>");
+    setTimeout(type, speed);
+  }
+}
+type();
+</script>
+</html>
+

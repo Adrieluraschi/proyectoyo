@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+<!--------para titulos---------->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
+<!--------para textos---------->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+
+
+
+</head>
+<header>
+  <nav class="barra">
+  <div class="logo">
+    <img src="images/gifprog.gif" alt="Mi logo" class="logo-img">
+  </div>
+
+  <!-- Menú hamburguesa -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="nav-links" id="nav-links">
+
+    <a href="sobre-mi.html">Sobre mí</a>
+    <a href="proyectos.html">Proyectos</a>
+    <a href="contacto.html">Contacto</a>
+  </div>
+</nav>
+</header>
+<body>
+    <h3 class="titulo1">BIENVENIDO</h3>
+   <p id="mi-typed"><span id="typed-text"></span><span class="cursor">█</span></p>
+    
+  
+
+
+
+
+</body>
+<script>
+const txt =  "Bienvenido al espacio digital de Adriel Luraschi 🏍️💻\n" +
+"> Iniciando motores...\n" +
+"> Preparando código y adrenalina...\n" +
+"> Combinando velocidad y precisión, tanto en la pista como en el teclado.\n" +
+"> Pasión por el motocross, la programación y mejorar cada línea de código.\n" +
+"> Explorá mis proyectos, conocé mi historia y descubrí en qué estoy trabajando.\n" +
+"> Sistema en línea.\n" +
+"> Bienvenido a mi viaje❤️.";
+
+const el = document.getElementById('typed-text');
+let i = 0;
+const speed = 30;
+
+function type() {
+  if (i < txt.length) {
+    el.innerHTML = txt.substring(0, i++).replace(/\n/g, "<br>");
+    setTimeout(type, speed);
+  }
+}
+type();
+</script>
+</html>

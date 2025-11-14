@@ -1,0 +1,291 @@
+.bruno-ace-sc-regular {
+  font-family: "Bruno Ace SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sixtyfour {
+  font-family: "Sixtyfour", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "BLED" 0,
+    "SCAN" 0;
+}
+body {
+  background-color: #040D04;
+}
+/* 🎯 TÍTULO */
+.titulo1 {
+  color: white;
+  text-align: center;
+  font-family: "Sixtyfour", sans-serif;
+  margin-top: 120px;
+}
+
+/* 💻 TEXTO */
+#mi-typed {
+  color: white;
+  font-size: 20px;
+  font-family: "Bruno Ace SC", sans-serif;
+  text-align: center;
+  margin: 40px auto;
+  white-space: pre-wrap;
+  width: 90%;
+  max-width: 600px;
+  height: 230px;
+  line-height: 1.5;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Cursor parpadeando estilo hacker */
+.cursor {
+  display: inline-block;
+  width: 10px;
+  background: #00ff00;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* LISTADO */
+ul {
+  color: white;
+  font-family: "Bruno Ace SC", sans-serif;
+  font-size: 18px;
+  margin: 20px auto;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* 🧱 BARRA DE NAVEGACIÓN */
+.barra {
+    max-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 70px;
+  background-color: #040D0D;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 255, 100, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* 🔰 LOGO */
+.logo-img {
+  width: 60px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+
+/* 🔗 LINKS */
+.nav-links {
+  display: flex;
+  flex: 1;              /* ocupa el espacio disponible */
+  justify-content: flex-end;
+  flex-wrap: wrap;       /* baja los links si no hay espacio */
+  gap: 10px;
+}
+.cv-btn {
+  display: inline-block;
+  background-color: #00ffc3;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-family: "Bruno Ace SC", sans-serif;
+}
+
+.cv-btn:hover {
+  background-color: #00bfa5;
+  transform: scale(1.05);
+}
+
+.nav-links a {
+  flex: 0 1 auto;       /* se encoge si es necesario */
+  max-width: 120px;     /* evita que los links crezcan demasiado */
+  text-align: center;
+  background: linear-gradient(90deg, #000, #0f0);
+  border-radius: 10px;
+  border: 2px solid #3AFF00;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+  white-space: normal;  /* permite que baje a varias líneas si hace falta */
+}
+
+.nav-links a:hover {
+  background-color: #00ff88;
+  color: #05070D;
+  box-shadow: 0 0 15px #00ff88;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+  .barra {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 15px 10px;
+  }
+
+  .logo-img {
+    width: 50px;
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    width: 80%;
+    font-size: 16px;
+    margin: 5px 0;
+  }
+}
+/* seccion git */
+.github-section {
+  text-align: center;
+  margin-top: 30px;
+  color: #00ff88;
+  font-family: "Bruno Ace SC", monospace;
+}
+
+.github-section a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #00ff88;
+  text-decoration: none;
+  border: 1px solid #00ff88;
+  border-radius: 8px;
+  padding: 8px 14px;
+  transition: 0.3s;
+}
+
+.github-section a:hover {
+  background-color: #00ff88;
+  color: #05070D;
+  box-shadow: 0 0 15px #00ff88;
+}
+.project-card {
+  color: white;
+  margin: 60px auto;
+  width: 90%;
+  max-width: 1100px;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #040D0D;
+  border: 1px solid #00ff88;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,255,136,0.3);
+  overflow: hidden;
+}
+
+.card-left {
+  flex: 1 1 50%;
+  background-color: #010806;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.proj-gallery {
+  display: flex;
+  justify-content: center;   /* centra las imágenes horizontalmente */
+  align-items: center;
+  flex-wrap: nowrap;         /* 🔹 todas en una sola línea */
+  gap: 10px;                 /* separación entre imágenes */
+  overflow-x: auto;          /* 🔹 si son muchas, se puede scrollear horizontal */
+  padding: 10px 0;
+  scrollbar-width: thin;
+}
+
+.proj-gallery img {
+  width: 1px;              /* 🔹 tamaño fijo (más chico) */
+  height: 100px;
+  object-fit: cover;         /* recorta para que se vea prolijo */
+  border-radius: 8px;
+  border: 1px solid #00ff88;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.proj-gallery img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
+}
+.card-body {
+  flex: 1 1 50%;
+  padding: 20px;
+  font-family: "Bruno Ace SC", sans-serif;
+}
+
+.proj-desc {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.proj-feat {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+  color: #00ff88;
+}
+
+.proj-feat li {
+  margin-bottom: 5px;
+}
+
+.proj-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.proj-actions a {
+  background-color: #00ff88;
+  color: #05070D;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.proj-actions a:hover {
+  background-color: #0affb3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .proj-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
