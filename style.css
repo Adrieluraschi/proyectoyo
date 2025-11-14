@@ -13,6 +13,15 @@
     "BLED" 0,
     "SCAN" 0;
 }
+.logo-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Sixtyfour", sans-serif;
+  font-size: 24px;
+  color: white;
+}
+
 body {
   background-color: #040D04;
 }
@@ -21,7 +30,8 @@ body {
   color: white;
   text-align: center;
   font-family: "Sixtyfour", sans-serif;
-  margin-top: 90px;
+  margin-top: 90px; 
+  margin-bottom: 10px; 
 }
 
 /* TEXTO */
@@ -30,7 +40,7 @@ body {
   font-size: 20px;
   font-family: "Bruno Ace SC", sans-serif;
   text-align: center;
-  margin: 40px auto;
+  margin: 10px auto; 
   white-space: pre-wrap;
   width: 90%;
   max-width: 600px;
@@ -39,7 +49,7 @@ body {
   position: relative;
 }
 
-/* mouse parpadeando estilo hacker */
+/* Parpadeo mouse */
 .cursor {
   display: inline-block;
   width: 10px;
@@ -215,17 +225,17 @@ ul {
   display: flex;
   justify-content: center;   
   align-items: center;
-  flex-wrap: nowrap;         /* 🔹 todas en una sola línea */
-  gap: 10px;                 /* separación entre imágenes */
-  overflow-x: auto;          /* 🔹 si son muchas, se puede scrollear horizontal */
+  flex-wrap: nowrap;         
+  gap: 10px;               
+  overflow-x: auto;          
   padding: 10px 0;
   scrollbar-width: thin;
 }
 
 .proj-gallery img {
-  width: 1px;              /* 🔹 tamaño fijo (más chico) */
+  width: 1px;             
   height: 100px;
-  object-fit: cover;         /* recorta para que se vea prolijo */
+  object-fit: cover;       
   border-radius: 8px;
   border: 1px solid #00ff88;
   box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
@@ -288,6 +298,6 @@ ul {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
 }
-main, section, .contenido {
-  padding-top: 90px;
+section {
+  padding-top: 80px; 
 }
