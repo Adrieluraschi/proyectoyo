@@ -21,7 +21,7 @@ body {
   color: white;
   text-align: center;
   font-family: "Sixtyfour", sans-serif;
-  margin-top: 120px;
+  margin-top: 90px;
 }
 
 /* TEXTO */
@@ -215,17 +215,17 @@ ul {
   display: flex;
   justify-content: center;   
   align-items: center;
-  flex-wrap: nowrap;        
-  gap: 10px;               
-  overflow-x: auto;         
+  flex-wrap: nowrap;         /* 🔹 todas en una sola línea */
+  gap: 10px;                 /* separación entre imágenes */
+  overflow-x: auto;          /* 🔹 si son muchas, se puede scrollear horizontal */
   padding: 10px 0;
   scrollbar-width: thin;
 }
 
 .proj-gallery img {
-  width: 1px;             
+  width: 1px;              /* 🔹 tamaño fijo (más chico) */
   height: 100px;
-  object-fit: cover;       
+  object-fit: cover;         /* recorta para que se vea prolijo */
   border-radius: 8px;
   border: 1px solid #00ff88;
   box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
@@ -287,4 +287,7 @@ ul {
   .proj-gallery {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
+}
+main, section, .contenido {
+  padding-top: 90px;
 }
